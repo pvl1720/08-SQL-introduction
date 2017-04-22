@@ -15,7 +15,7 @@ const app = express();
 // Windows and Linux users; You should have retained the user/pw from the pre-work for this course.
 // Your url may require that it's composed of additional information including user and password
 // const conString = 'postgres://USER:PASSWORD@HOST:PORT/DBNAME';
-const conString = 'postgres://tupac:thuglife@localhost:5432'; //check on this
+const conString = 'postgres://maks@localhost:5432/lab08'; //check on this
 
 // TODO: Our pg module has a Client constructor that accepts one argument: the conString we just defined.
 //       This is how it knows the URL and, for Windows and Linux users, our username and password for our
@@ -25,7 +25,6 @@ const client = new pg.Client(conString);
 
 // REVIEW: Use the client object to connect to our DB.
 client.connect();
-
 
 // REVIEW: Install the middleware plugins so that our app is aware and can use the body-parser module
 app.use(bodyParser.json());
